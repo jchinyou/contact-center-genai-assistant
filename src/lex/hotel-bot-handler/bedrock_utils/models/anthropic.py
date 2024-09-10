@@ -94,7 +94,7 @@ class AnthropicClaudeModel(BedrockModel):
                 prompt, human = prompt.split('Human:', 1)
             
             if 'System:' in prompt:
-                prompt, system = prompt.rsplit('System:', 1)
+                prompt, system = prompt.split('System:', 1)
                 
             user = human if human else prompt
 
